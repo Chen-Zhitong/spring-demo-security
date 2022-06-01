@@ -52,7 +52,6 @@ public class MyUserDetailsService implements UserDetailsService {
             grantedAuthorities.add(new SimpleGrantedAuthority(authority));
         }
 
-        return new org.springframework.security.core.userdetails.User(username, user.getPassword(),
-                grantedAuthorities);
+        return new AuthUser(username, user.getPassword(), grantedAuthorities);
     }
 }

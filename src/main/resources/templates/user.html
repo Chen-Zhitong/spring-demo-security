@@ -5,10 +5,9 @@
     <title>Hello World!</title>
 </head>
 <body>
-<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<h1 th:inline="text">你拥有访问权限 [[${#httpServletRequest.remoteUser}]]!</h1>
 <form method="post" th:action="@{/logout}">
     <input type="submit" value="Sign Out"/>
 </form>
-<p>go <a th:href="@{/user}">user</a></p>
 </body>
 </html>
